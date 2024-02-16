@@ -102,8 +102,8 @@ async function displayAlbums() {
     //      </div>
     //      <img src="./songs/${folder}/cover.jpg">
 
-    //      <h2>${response.title}</h2>
-    //      <p>${response.Description}</p>
+    //      <h4>${response.title}</h4>
+    //      <p>${response.description}</p>
     //  </div> `;
 
     //     }
@@ -119,8 +119,9 @@ async function displayAlbums() {
      
 
       <img src="/songs/${folder}/cover.jpg" alt="">
-      <h2>${response.title}</h2>
+      <h3>${response.title}</h3>
       <p>${response.description}</p>
+      
   </div>`
     }
   }
