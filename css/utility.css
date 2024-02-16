@@ -1,0 +1,69 @@
+.border {
+  border: 2px solid red;
+  margin: 3px;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.bg-black {
+  background-color: black;
+  color: white;
+}
+
+.bg-grey {
+  background-image: radial-gradient(#191c43, #0a0817);
+  background-color: #131125;
+  color: white;
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.rounded {
+  border-radius: 7px;
+}
+
+.m-1 {
+  margin: 5px;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+/* Custom scrollbar styles for a black website */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #030020; /* Set the background color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0d466a; /* Set the color of the scrollbar handle */
+  border-radius: 6px; /* Set the border radius of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Set the color of the scrollbar handle on hover */
+}
+@media (max-width: 500px) {
+  ::-webkit-scrollbar {
+    width: 2px; /* Set the width of the scrollbar */
+  }
+}
