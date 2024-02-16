@@ -24,7 +24,7 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`/${folder}/`)
+  let a = await fetch(`./${folder}/`);
   let response = await a.text();
   let div = document.createElement("div")
   div.innerHTML = response;
@@ -73,7 +73,8 @@ async function getSongs(folder) {
 // Playing Music - Function
 
 const playMusic = (track, pause = false) => {
-  currSong.src = `${currFolder}/` + track;
+  currSong.src = `./${currFolder}/` + track;
+
   if (!pause) {
     currSong.play();
     play.src = "img/pause.svg";
@@ -83,7 +84,8 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`/songs/`);
+  let a = await fetch(`./songs/`);
+
   let response = await a.text();
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -92,17 +94,19 @@ async function displayAlbums() {
   let array = Array.from(anchors);
   for (let index = 0; index < array.length; index++) {
     const e = array[index];
-    if (e.href.includes("songs/") && !e.href.includes(".htaccess")) {
+    if (e.href.includes("/songs/") && !e.href.includes(".htaccess")) {
       let folder = e.href.split("/").slice(-2)[1];
       // Get The meta deta of the folder
-      let a = await fetch(`/songs/${folder}/info.json`);
+      let a = await fetch(`./songs/${folder}/info.json`);
+
       let response = await a.json();
       cardContainer.innerHTML = cardContainer.innerHTML +
         ` <div data-folder="${folder}" class="card">
      <div class="play">
      
      </div>
-     <img src="songs/${folder}/cover.jpg">
+     <img src="./songs/${folder}/cover.jpg">
+
      <h4>${response.title}</h4>
      <p>${response.Description}</p>
  </div> `;
@@ -123,7 +127,7 @@ async function displayAlbums() {
 // Main function
 
 async function main() {
-  await getSongs("songs/1ArijitSingh");
+  await getSongs("songs");
   playMusic(songs[0], true);
 
   // call Display albums
