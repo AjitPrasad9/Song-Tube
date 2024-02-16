@@ -21,7 +21,8 @@
 }
 
 .bg-grey {
-  background-image: radial-gradient(#191c43, #0a0817);
+  /* background-image: radial-gradient(#191c43, #0a0817, #030020); */
+  background-image: radial-gradient(#191c43, #030020, #030020);
   background-color: #131125;
   color: white;
 }
