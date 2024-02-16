@@ -44,7 +44,7 @@ async function getSongs(folder) {
     songUL.innerHTML = songUL.innerHTML + `<li><img class=" " width="34" src="img/music.svg" alt="">
                           <div class="info">
                               <div> ${song.replaceAll("%20", " ")}</div>
-                              <div>Harry</div>
+                              <div>Ajit</div>
                           </div>
                           <div class="playnow">
                               <span>Play Now</span>
@@ -119,8 +119,8 @@ async function displayAlbums() {
      
 
       <img src="/songs/${folder}/cover.jpg" alt="">
-      <h3>${response.title}</h3>
-      <p>${response.description}</p>
+      <h4>&nbsp${response.title}</h4>
+      <p>&nbsp${response.description}</p>
       
   </div>`
     }
